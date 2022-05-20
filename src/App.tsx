@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 function App() {
+  const alertMe = () => {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Stack>
+        <Alert severity='error'>This is an error alert — check it out!</Alert>
+      </Stack>
+      <Button
+        variant='contained'
+        onClick={() => {
+          alertMe();
+        }}
+      >
+        123
+      </Button>
+    </>
   );
 }
-
 export default App;
